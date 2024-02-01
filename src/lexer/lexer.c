@@ -9,10 +9,21 @@
  */
 
 #include <stdint.h>
-#include <stdio.h>
+#include <stdio.h>  // macro
+#include <stdlib.h> // macro
 
-int main(void) {
-    printf("beanfry\n");
+#include "lexer/lexer.h"
+#include "src/util/util.h"
+
+int32_t tokenize(const char* program, Array_Token* tokens) {
+    Array_init(Token, tokens);
+
+    char ch;
+    uint32_t count = 0;
+    size_t pos = 0;
+
+    while ((ch = program[pos++]) != '\0') {
+    }
 
     return 0;
 }

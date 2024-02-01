@@ -6,7 +6,13 @@ sources = [
   'src/main.c',
 ]
 
+include_directories = [
+  './',
+  './src'
+]
+
 exe = executable('beanfry',
+  include_directories: include_directories,
   sources : sources,
   install : true,)
 
